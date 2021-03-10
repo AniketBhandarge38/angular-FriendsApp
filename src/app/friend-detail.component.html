@@ -1,0 +1,14 @@
+<div *ngIf="frnd">
+
+  <h2>{{frnd.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{frnd.id}}</div>
+  <div>
+    <label for="friend-name">Friend name: </label>
+    <input id="friend-name" [(ngModel)]="frnd.name" placeholder="name">
+  </div>
+  <div>
+    <label> Place :</label>
+    <input type="text" [(ngModel)]="frnd.place" >
+  </div>
+
+</div>

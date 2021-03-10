@@ -1,0 +1,9 @@
+<h3>Friends Component</h3>
+<ul class="heroes">
+  <li *ngFor="let item of myfriends" [class.selected]="item === selectedFriend" (click)="OnFriendSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.name}}
+    <span class="plc">{{item.place}}</span>
+  </li>
+</ul>
+
+<friendDetail-app [frnd]="selectedFriend"></friendDetail-app>
