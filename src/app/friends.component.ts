@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { friend } from "./friend";
 import { FriendService } from "./friend.service";
+import { notiService } from "./notification.service";
 import { AllFriends } from "./samplefriends";
 
 @Component({
@@ -11,7 +12,10 @@ import { AllFriends } from "./samplefriends";
 export class friendsComp {
   myfriends: friend[];
 
-  constructor(private frndService: FriendService) {}
+  constructor(
+    private frndService: FriendService,
+    private notiser: notiService
+  ) {}
 
   getFriends() {
     this.frndService.getFriends().subscribe(f => (this.myfriends = f));
@@ -23,5 +27,6 @@ export class friendsComp {
   selectedFriend: friend;
   OnFriendSelect(frnd: friend) {
     this.selectedFriend = frnd;
+    this.notiser.add(`selected Friend is : ${frnd.name}`);
   }
 }

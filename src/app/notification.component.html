@@ -1,0 +1,6 @@
+<h2>Notifications </h2>
+
+<div *ngIf="noti.notifications.length">
+  <div *ngFor="let item of noti.notifications">{{item}}</div>
+  <button class="clear" (click)="noti.clear()">clear notice</button>
+</div>

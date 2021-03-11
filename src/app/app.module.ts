@@ -6,11 +6,13 @@ import { AppComponent } from "./app.component";
 import { friendsComp } from "./friends.component";
 import { friendDetailComp } from "./friend-detail.component";
 import { FriendService } from "./friend.service";
+import { notiComp } from "./notification.component";
+import { notiService } from "./notification.service";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, friendsComp, friendDetailComp],
+  declarations: [AppComponent, friendsComp, friendDetailComp, notiComp],
   bootstrap: [AppComponent],
-  providers: [FriendService]
+  providers: [FriendService, notiService]
 })
 export class AppModule {}
