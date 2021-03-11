@@ -1,25 +1,31 @@
-/* Application-wide Styles */
+/* AppComponent's private CSS styles */
 h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  margin-bottom: 0;
+  color: blueviolet;
+  font: bold;
+  font-size: 3em;
 }
-h2,
-h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+nav a {
+  padding: 0.5rem;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+  margin-inline: 0.3em;
 }
-body {
-  margin: 2em;
+
+nav a:hover {
+  color: white;
+  background-color: #42545c;
 }
-body,
-input[type="text"],
-button {
-  color: #333;
-  font-family: Cambria, Georgia, serif;
+nav a.active {
+  background-color: black;
 }
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

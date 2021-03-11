@@ -8,10 +8,18 @@ import { friendDetailComp } from "./friend-detail.component";
 import { FriendService } from "./friend.service";
 import { notiComp } from "./notification.component";
 import { notiService } from "./notification.service";
+import { AppRoutingModule } from "./app-routing.module";
+import { DashboardComp } from "./dashboard.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, friendsComp, friendDetailComp, notiComp],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    friendsComp,
+    friendDetailComp,
+    notiComp,
+    DashboardComp
+  ],
   bootstrap: [AppComponent],
   providers: [FriendService, notiService]
 })

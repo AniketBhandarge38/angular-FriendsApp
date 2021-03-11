@@ -12,10 +12,7 @@ import { AllFriends } from "./samplefriends";
 export class friendsComp {
   myfriends: friend[];
 
-  constructor(
-    private frndService: FriendService,
-    private notiser: notiService
-  ) {}
+  constructor(private frndService: FriendService) {}
 
   getFriends() {
     this.frndService.getFriends().subscribe(f => (this.myfriends = f));
@@ -23,10 +20,5 @@ export class friendsComp {
 
   ngOnInit() {
     this.getFriends();
-  }
-  selectedFriend: friend;
-  OnFriendSelect(frnd: friend) {
-    this.selectedFriend = frnd;
-    this.notiser.add(`selected Friend is : ${frnd.name}`);
   }
 }
